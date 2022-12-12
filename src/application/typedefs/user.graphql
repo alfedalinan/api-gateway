@@ -1,0 +1,9 @@
+type User {
+    id: Int
+    name: String
+    age: Int
+}
+
+extend type Query {
+    getAllUsers: [User]
+}

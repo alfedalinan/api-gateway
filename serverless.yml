@@ -1,0 +1,37 @@
+service: api-gateway-template
+
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: local
+
+functions:
+  graphql:
+    handler: src/handlers/graphql.process
+    events:
+     - http:
+        path: graphql
+        method: post
+
+custom:
+  localstack:
+    stages:
+      - local
+    host: http://localhost
+    edgePort: 4566
+    autostart: true
+    # networks: #optional - attaches the list of networks to the localstack docker container after startup
+    #   - host
+    #   - overlay
+    #   - my_custom_network
+    # lambda: 
+    #   mountCode: true
+    # docker:
+    #   sudo: false
+  stages:
+    local:
+
+plugins:
+  - serverless-localstack
