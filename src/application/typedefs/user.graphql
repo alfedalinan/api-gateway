@@ -4,6 +4,21 @@ type User {
     age: Int
 }
 
+input UserInput {
+    name: String
+    age: Int
+}
+
 extend type Query {
     getAllUsers: [User]
+    getUserById(id: Int!): User
+}
+
+extend type Mutation {
+    createUser(data: UserInput): User
+    updateUser(
+        id: Int
+        data: UserInput
+    ): User
+    removeUser(id: Int): Boolean
 }

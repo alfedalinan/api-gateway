@@ -11,6 +11,7 @@
     "serverless-localstack": "^1.0.1"
   },
   "dependencies": {
+    "apollo-server": "^3.11.1",
     "apollo-server-lambda": "^3.11.1",
     "graphql": "^16.6.0",
     "lodash.merge": "^4.6.2"

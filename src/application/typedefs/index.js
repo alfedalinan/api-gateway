@@ -4,7 +4,7 @@ const { gql } = require('apollo-server-lambda')
 
 const typeDefs = gql`
     type Query
-    type Mutation { message: String }
+    type Mutation
     ${userTypeDefs}
 `
 
