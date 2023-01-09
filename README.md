@@ -1,7 +1,14 @@
 # API Gateway Template (AWS Serverless)
 
-This is my self-made GraphQL API Gateway Node.js (pure JavaScript) template. I have used [Serverless framework](https://www.serverless.com) and [Localstack](https://localstack.cloud) to this development.
+This is my bare project of an API Gateway providing layer of authorization, security, and centralization of requests and forwards them to microservices.
 
-## NOTE
+## Flow Diagram
 
-Work still in-progress. I will update this README once setup/preparation is complete.
+![](./docs/images/APiV2SS.png)
+
+## Technologies and Libraries
+- [Node.js](https://nodejs.org/en/) (in pure JavaScript)
+- [GraphQL](https://graphql.org/)
+- [Apollo Server](https://www.apollographql.com/docs/apollo-server)
+- [Serverless Framework](https://www.serverless.com)
+- [Localstack](https://localstack.cloud)
